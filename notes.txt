@@ -1,0 +1,14 @@
+Abbiamo capito che nel 2023 dobbiamo, da bravi frontenders, essere in grado di popolare
+le nostre pagine con dati dinamici.
+Come vengono offerti i dati da un'API REST? I dati vengono forniti attraverso ENDPOINTS,
+degli indirizzi URL che specificano una risorsa. Solitamente, facendo una richiesta sull'indirizzo stesso otteniamo un ARRAY di risultati, è anche possibile solitamente specificare l'id dell'elemento specifico che ci interessa nell'URL per ottenere solamente la risorsa desiderata.
+Però come ottengo questi dati via JS? Io voglio creare una pagina a partire da essi!
+
+XMLHttpRequest <-- primo in assoluto, oggi risulta verboso e prolisso da utilizzare
+$.ajax() <-- da jQuery, oggi un libreria in disuso
+fetch() <-- strumento moderno integrato in tutti i browser in uso
+
+Questi sono metodi per effettuare una chiamata HTTP e ottenere dei dati/salvare un nuovo dato/aggiornare un dato esistente/eliminare una risorsa.
+
+Il vero problema di utilizzare questi metodi per effettuare chiamate HTTP è che sono ASINCRONI! Quindi è necessario capire come gestire questo tipo di operazioni in modo da
+fornire un'esperienza d'uso decente sia se ci troviamo a Berlino con una fibra FTTH a 1gbps sia se ci troviamo in mezzo al deserto con connettività 2G. :)
